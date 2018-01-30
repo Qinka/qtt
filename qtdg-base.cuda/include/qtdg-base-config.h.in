@@ -1,0 +1,20 @@
+/**
+ * The config head of qtdg-base
+ */
+
+#ifndef _QTDG_BASE_CONFIG_H_
+#define _QTDG_BASE_CONFIG_H_ 0
+
+#define IS_USING_GPU @QTDG_BASE_GPU_I@
+
+
+#ifndef QTDB_BASE_EXPORT_C_API
+#ifdef WIN32
+# define QTDB_BASE_EXPORT_C_API extern "C" _declspec(dllexport)
+#else // WIN32
+# define QTDB_BASE_EXPORT_C_API extern "C"
+#endif // WIN32
+#endif // ! EXPORT_C_API
+
+
+#endif // ! _QTDG_BASE_CONFIG_H_
